@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
+body {
+    font-family: "Muli", sans-serif;
+    font-weight: 300;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.1em; /* Adjust as needed */
+    animation: typing 4.5s steps(20, end), blink-caret 0.75s step-end 10;
+    text-align: center;
+    font-size: 1.2em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #aff8fc;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#quote-box {
+    background-color: #006fc7;
+    width: 70%;
+    margin: auto;
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 11px #e6e6e6;
+    color: white;
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+#wrapper {
+    height: 300px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+    padding: 10px 10px 10px 10px;
+    /* here */
+    background: linear-gradient(
+        to right bottom,
+        #b2e0fa,
+        #3593d6,
+        #0067bd,
+        #003a9d,
+        #050075
+    );
+    background-size: 200% auto;
+    transition: 0.5s;
+    /* to here */
+    color: white;
+    text-decoration: none;
+    border: 0.5px solid #82c9f4;
+    border-radius: 20px;
+}
+button:hover {
+    background-position: right center;
+}
+.buttonHolder {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.space {
+    padding: 10px;
+}
+
+/* Default breakpoint */
+
+@media screen {
+    h1 {
+        margin-top: 2vh;
+        font-size: 0.9em; /* Base font-size of 32px */
+    }
+    #quote-box {
+        margin-top: 5vh;
+        font-size: 0.9em;
+        line-height: 1.3em;
+    }
+    img {
+        width: 60%;
+    }
+}
+/* Phone breakpoint */
+
+@media screen and (min-width: 480px) {
+    h1 {
+        margin-top: 3vh;
+        font-size: 1em; /* Base font-size of 32px */
+    }
+    #quote-box {
+        margin-top: 2vh;
+        line-height: 1.3em;
+        width: 60%;
+    }
+    img {
+        width: 50%;
+    }
+}
+/* Tablet breakpoint */
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 1.4em; /* Base font-size of 32px */
+    }
+    #quote-box {
+        line-height: 1.5em;
+        margin-top: 2vh;
+        width: 50%;
+    }
+    img {
+        width: 40%;
+    }
+}
+/* Tablet large breakpoint */
+@media screen and (min-width: 992px) {
+    h1 {
+        font-size: 1.5em; /* Base font-size of 32px */
+    }
+    #quote-box {
+        margin-top: 2vh;
+        width: 40%;
+        line-height: 1.5em;
+    }
+    img {
+        width: 30%;
+    }
+}
+
+/* Laptop  breakpoint */
+@media screen and (min-width: 1200px) {
+    h1 {
+        font-size: 1.6em; /* Base font-size of 32px */
+    }
+    #quote-box {
+        margin-top: 3vh;
+        width: 40%;
+        line-height: 1.5em;
+    }
+    img {
+        width: 30%;
+    }
 }
