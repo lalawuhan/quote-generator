@@ -3,7 +3,7 @@ Generate random quotes by women in tech.
 Free Code Camp (FCC) Front-end Development's project:
 A web application that generates a new quote when a button is pressed and has an option for the user to automatically tweet that quote.
 
-<img src="https://raw.githubusercontent.com/lalawuhan/quote-generator/master/src/appreview.gif" width="300" height="150" alt="project demo gif"  />
+<img src="https://raw.githubusercontent.com/lalawuhan/quote-generator/master/src/appreview.gif" width="500" height="250" alt="project demo gif"  />
 
 ### Built With
 
