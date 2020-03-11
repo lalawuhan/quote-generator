@@ -16,8 +16,7 @@ class App extends Component {
     }
     getQuote() {
         let url =
-            "https://gist.githubusercontent.com/lalawuhan/2f3bd00ffb34deda831ac667a0f8f14b/raw/64f5a565be7364c4d545eb60508a285433b5cc89/quotes.json";
-
+            "https://raw.githubusercontent.com/lalawuhan/quote-generator-data/master/quotes.json";
         axios.get(url).then(res => {
             let data = res.data;
             console.log(data);
