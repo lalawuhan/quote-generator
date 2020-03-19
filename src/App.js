@@ -66,7 +66,6 @@ class App extends Component {
                             rel="noopener noreferrer"
                             title="Post this quote on twitter!"
                         >
-                            {" "}
                             <button>Tweet</button>
                         </a>
 
